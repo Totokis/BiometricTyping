@@ -1,0 +1,59 @@
+﻿<Window x:Class="TypingTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+         xmlns:Behaviors="using:Template10.Behaviors"
+        xmlns:Core="using:Microsoft.Xaml.Interactions.Core" 
+        xmlns:vm="clr-namespace:TypingTest.ViewModel"
+        
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        
+        mc:Ignorable="d"
+        
+        xmlns:local="clr-namespace:TypingTest"
+        Title="MainWindow" Height="450" Width="800">
+
+
+
+    <!--<Window.Resources>
+        <vm:MainViewModel x:Key="DisplayedItems"/>
+    </Window.Resources>-->
+    <!--<Grid DataContext="{StaticResource DisplayedItems}">-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <!--<TextBox Grid.Row="5">Dupa</TextBox>-->
+
+            <ListBox Name="lbKeysInfo" Grid.Column="0"/>
+            <Button Name="bHideShow" Grid.Row="1" 
+                    Click="cHideShowClick" Content="Show/Hide Results"/>
+            <Button Name="bConfirm" Grid.Row="2" Click="cConfirmResult" Content="Confirm attempt"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Name="txtbInfo" Text="remaining_attempts_left and inf" Margin="10" Padding="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBox Grid.Row="1" Grid.Column="2" 
+                     Name="tbTypingField" Text="texthere" KeyUp="OnKeyUpHandler" KeyDown="OnKeyDownHandler" TextChanged="OnTextChangedHandler" Margin="5"/>
+        </Grid>
+        
+    </Grid>
+</Window>

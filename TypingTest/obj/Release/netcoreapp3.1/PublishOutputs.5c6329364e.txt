@@ -1,0 +1,5 @@
+C:\Users\admin\source\repos\TypingTest\TypingTest\bin\publish\TypingTest.exe
+C:\Users\admin\source\repos\TypingTest\TypingTest\bin\publish\TypingTest.dll
+C:\Users\admin\source\repos\TypingTest\TypingTest\bin\publish\TypingTest.deps.json
+C:\Users\admin\source\repos\TypingTest\TypingTest\bin\publish\TypingTest.runtimeconfig.json
+C:\Users\admin\source\repos\TypingTest\TypingTest\bin\publish\TypingTest.pdb
