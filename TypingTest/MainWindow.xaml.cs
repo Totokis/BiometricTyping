@@ -151,6 +151,12 @@ namespace TypingTest
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
+            if(e.Key == Key.Enter)
+            {
+                cConfirmResult(null, null);
+                return;
+            }
+
             if (!keys.ContainsKey(e.Key))
                 keys.Add(e.Key, new Stopwatch());
             keys[e.Key].Start();
@@ -158,8 +164,10 @@ namespace TypingTest
 
         private void OnKeyUpHandler(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.Enter)
+                return;
+
             Debug.WriteLine(e.Key);
-            Debug.WriteLine("dupasof");
 
             if (keys.ContainsKey(e.Key))
             { 
